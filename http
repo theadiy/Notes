@@ -1,0 +1,9 @@
+apache service
+  sudo systemctl start apache2
+
+to check apache service
+  sudo ss -antlp | grep apache
+  
+to enable any service at boot time 
+  sudo systemctl enable apache2
+
