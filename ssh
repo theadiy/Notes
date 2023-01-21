@@ -4,3 +4,9 @@ ssh service
 to check ssh service
   sudo ss -antlp | grep sshd
   
+to enable any service at boot time 
+  sudo systemctl enable ssh
+
+to connect to ssh
+  ssh root@10.0.0.1 
+  
