@@ -1,0 +1,6 @@
+ssh service
+  sudo systemctl start ssh
+
+to check ssh service
+  sudo ss -antlp | grep sshd
+  
