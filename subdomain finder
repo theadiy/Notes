@@ -1,0 +1,3 @@
+install seclist from github
+
+  gobuster vhost -u http://stocker.htb -t 50 -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --append-domain
