@@ -1,0 +1,4 @@
+change your request body from username=admin&password=admin to
+  {"username": {"$ne": null}, "password": {"$ne": null}}   --NOSQL injection
+
+and change "Content-Type" to "application/json"
