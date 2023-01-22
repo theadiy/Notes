@@ -1,0 +1,2 @@
+to view want current user can perform
+  sudo -l
